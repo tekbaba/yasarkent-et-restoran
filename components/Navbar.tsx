@@ -49,7 +49,7 @@ export function Navbar() {
       )}
     >
       <nav
-        className="mx-auto grid h-20 max-w-[1440px] grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-5 md:px-8 lg:grid-cols-[minmax(0,1fr)_auto_auto] lg:px-12"
+        className="mx-auto grid h-20 max-w-[1440px] grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-5 md:px-8 lg:grid-cols-[auto_1fr_auto] lg:px-8"
         aria-label="Ana menü"
       >
         <Link href="/" className="flex min-w-0 items-center gap-3 justify-self-start">
@@ -67,7 +67,7 @@ export function Navbar() {
           </span>
         </Link>
 
-        <ul className="hidden items-center gap-8 lg:flex lg:justify-self-center">
+        <ul className="hidden items-center justify-center gap-7 lg:flex">
           {siteConfig.nav.map((item) => (
             <li key={item.href}>
               <Link
