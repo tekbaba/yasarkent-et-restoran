@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Phone, MessageCircle } from "lucide-react";
 import { siteConfig, telHref, whatsappHref } from "@/config/site";
 import { Button } from "@/components/ui/Button";
@@ -15,10 +16,10 @@ export function Reservation() {
     <section id="rezervasyon" className="grain relative isolate overflow-hidden py-28 md:py-36">
       <Image
         src="/images/section-reservation.jpg"
-        alt=""
+        alt="Kemalpaşa Yaşarkent ızgara rezervasyon"
         fill
-        quality={90}
-        sizes="100vw"
+        quality={75}
+        sizes="(max-width: 768px) 100vw, 1600px"
         className="object-cover"
       />
       <div className="absolute inset-0 bg-ink/82" />
@@ -29,11 +30,15 @@ export function Reservation() {
             Rezervasyon
           </p>
           <h2 className="font-display text-5xl font-medium text-cream sm:text-6xl lg:text-7xl">
-            Sofranız Hazır.
+            Kemalpaşa’da Masa Rezervasyonu.
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-cream-muted sm:text-lg">
             Sevdiklerinizle Kemalpaşa’da unutulmaz bir Yaşarkent sofrası için
-            yerinizi ayırtın.
+            yerinizi ayırtın.{" "}
+            <Link href="/iletisim" className="text-gold underline-offset-4 hover:underline">
+              İletişim sayfasından
+            </Link>{" "}
+            da ulaşabilirsiniz.
           </p>
         </Reveal>
 

@@ -10,9 +10,10 @@ import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin", "latin-ext"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500"],
   variable: "--font-cormorant",
   display: "swap",
+  preload: true,
 });
 
 const outfit = Outfit({

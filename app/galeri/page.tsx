@@ -22,7 +22,7 @@ export default function GalleryPage() {
       />
       <PageHero
         eyebrow="Galeri"
-        title="Kemalpaşa’dan Izgara Kareleri."
+        title="Kemalpaşa Yaşarkent Izgara Galerisi."
         image="/images/page-gallery.jpg"
       />
       <Gallery compact={false} />

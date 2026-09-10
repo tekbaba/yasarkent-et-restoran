@@ -1,5 +1,6 @@
 import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
 import { MenuSection } from "@/components/Menu";
+import { MenuIntro } from "@/components/MenuIntro";
 import { PageHero } from "@/components/PageHero";
 import { Reservation } from "@/components/Reservation";
 import { pageSeo } from "@/lib/seo";
@@ -26,7 +27,8 @@ export default function MenuPage() {
         description="Çorba, ızgara, kebap, pide ve tatlı. Kemalpaşa’daki güncel fiyatlarımız."
         image="/images/page-menu.jpg"
       />
-      <MenuSection heading="Kategoriler" showFilters featuredOnly={false} />
+      <MenuIntro />
+      <MenuSection heading="Kemalpaşa kebap, ızgara ve pide" showFilters featuredOnly={false} />
       <Reservation />
     </>
   );

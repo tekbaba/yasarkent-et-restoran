@@ -22,7 +22,7 @@ export default function ContactPage() {
       />
       <PageHero
         eyebrow="İletişim"
-        title="Kemalpaşa’ya Yolunuz Düşsün."
+        title="Kemalpaşa İletişim ve Rezervasyon."
         image="/images/section-about.jpg"
       />
       <Reservation />

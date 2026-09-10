@@ -55,7 +55,7 @@ export function Gallery({ compact = true }: GalleryProps) {
                   alt={image.alt}
                   width={1200}
                   height={image.span === "tall" ? 1500 : image.span === "wide" ? 900 : 1100}
-                  quality={90}
+                  quality={75}
                   className={cn(
                     "w-full object-cover transition-transform duration-700 group-hover:scale-[1.05]",
                     image.span === "tall" ? "aspect-[3/4]" : "aspect-[4/3]",

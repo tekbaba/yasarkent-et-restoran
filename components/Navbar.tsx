@@ -54,13 +54,14 @@ export function Navbar() {
       >
         <Link href="/" className="flex min-w-0 items-center gap-3 justify-self-start">
           <Image
-            src="/images/logo.png"
+            src="/images/logo-96.webp"
             alt="Yaşarkent Et Restoran Kemalpaşa logosu"
-            width={128}
-            height={128}
-            quality={90}
+            width={48}
+            height={48}
+            sizes="48px"
+            quality={75}
+            unoptimized
             className="size-11 shrink-0 object-contain p-0.5 sm:size-12"
-            priority
           />
           <span className="truncate font-display text-xl tracking-[0.28em] text-cream sm:text-2xl">
             {siteConfig.shortName}

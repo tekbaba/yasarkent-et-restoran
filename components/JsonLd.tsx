@@ -13,25 +13,26 @@ export function JsonLd() {
     name: siteConfig.name,
     alternateName: siteConfig.shortName,
     url: domain,
-    image: [
-      `${domain}${siteConfig.ogImage}`,
-      `${domain}/images/hero.jpg`,
-      `${domain}/images/section-about.jpg`,
-    ],
+    telephone: contact.phone,
+    image: `${domain}/images/hero.jpg`,
     logo: `${domain}/images/logo.png`,
     description: siteConfig.description,
-    servesCuisine: ["Turkish", "Grill", "Kebab", "Pide", "Lahmacun"],
+    servesCuisine: ["Turkish", "Grill"],
     priceRange: "₺₺",
     currenciesAccepted: "TRY",
     paymentAccepted: "Cash, Credit Card",
-    acceptsReservations: "True",
+    acceptsReservations: true,
     hasMenu: `${domain}/menu`,
-    menu: `${domain}${siteConfig.menuPdf}`,
+    menu: `${domain}/menu`,
     inLanguage: "tr-TR",
-    areaServed: [
-      { "@type": "City", name: "Kemalpaşa" },
-      { "@type": "City", name: "İzmir" },
-    ],
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Sekiz Eylül, 96. Sk No:3",
+      addressLocality: "Kemalpaşa",
+      addressRegion: "İzmir",
+      postalCode: "35730",
+      addressCountry: "TR",
+    },
     geo: {
       "@type": "GeoCoordinates",
       latitude: geo.lat,
@@ -44,6 +45,10 @@ export function JsonLd() {
         opens: "09:00",
         closes: "23:00",
       },
+    ],
+    areaServed: [
+      { "@type": "City", name: "Kemalpaşa" },
+      { "@type": "City", name: "İzmir" },
     ],
     potentialAction: {
       "@type": "ReserveAction",
@@ -58,21 +63,6 @@ export function JsonLd() {
       },
     },
   };
-
-  if (contact.phone) {
-    restaurant.telephone = contact.phone;
-  }
-
-  if (contact.address) {
-    restaurant.address = {
-      "@type": "PostalAddress",
-      streetAddress: "Sekiz Eylül, 96. Sk No:3",
-      addressLocality: "Kemalpaşa",
-      addressRegion: "İzmir",
-      postalCode: "35730",
-      addressCountry: "TR",
-    };
-  }
 
   if (contact.mapsUrl) {
     restaurant.hasMap = contact.mapsUrl;

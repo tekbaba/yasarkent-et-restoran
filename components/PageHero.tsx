@@ -17,8 +17,9 @@ export function PageHero({ eyebrow, title, description, image, className }: Page
         alt={title}
         fill
         priority
-        quality={90}
-        sizes="100vw"
+        fetchPriority="high"
+        quality={75}
+        sizes="(max-width: 768px) 100vw, 1400px"
         className="object-cover object-center"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/55 to-ink/30" />

@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import Image from "next/image";
 import { featuredMenuItems, menuCategories, menuItems, menuNote, type MenuCategoryId } from "@/data/menu";
+import { dishImageAlt } from "@/lib/seo";
 import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
@@ -26,7 +27,7 @@ function formatPrice(price: number | null, category?: MenuCategoryId): string | 
 }
 
 export function MenuSection({
-  heading = "Menüden Seçtiklerimiz",
+  heading = "Kemalpaşa menüsünden seçtiklerimiz",
   showFilters = false,
   featuredOnly = true,
 }: MenuSectionProps) {
@@ -95,10 +96,10 @@ export function MenuSection({
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <Image
                       src={item.image}
-                      alt={item.name}
+                      alt={dishImageAlt(item.name)}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      quality={90}
+                      quality={75}
                       className="object-cover transition-transform duration-700 group-hover:scale-[1.05]"
                     />
                   </div>

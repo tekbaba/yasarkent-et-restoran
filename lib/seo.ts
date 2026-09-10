@@ -7,6 +7,10 @@ interface PageSeoInput {
   path: string;
 }
 
+export function dishImageAlt(name: string): string {
+  return `Kemalpaşa Yaşarkent ${name}`;
+}
+
 export function pageSeo({ title, description, path }: PageSeoInput): Metadata {
   const url = `${siteConfig.domain}${path}`;
   const brandedTitle = `${title} | ${siteConfig.name}`;

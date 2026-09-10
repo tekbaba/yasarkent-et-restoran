@@ -1,19 +1,34 @@
-import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 
 export function Hero() {
   return (
     <section className="grain relative isolate flex min-h-[100svh] items-end overflow-hidden">
+      <link
+        rel="preload"
+        as="image"
+        type="image/webp"
+        href="/images/hero-800.webp"
+        imageSrcSet="/images/hero-800.webp 800w, /images/hero-1600.webp 1600w"
+        imageSizes="(max-width: 768px) 100vw, 1600px"
+        fetchPriority="high"
+      />
       <div className="absolute inset-0">
-        <Image
-          src="/images/hero.jpg"
-          alt="Kemalpaşa Yaşarkent Et Restoran ızgara et"
-          fill
-          priority
-          quality={90}
-          sizes="100vw"
-          className="object-cover"
-        />
+        <picture>
+          <source
+            type="image/webp"
+            srcSet="/images/hero-800.webp 800w, /images/hero-1600.webp 1600w"
+            sizes="(max-width: 768px) 100vw, 1600px"
+          />
+          <img
+            src="/images/hero-800.webp"
+            alt="Kemalpaşa Yaşarkent Et Restoran ızgara et"
+            width={1600}
+            height={1201}
+            fetchPriority="high"
+            decoding="async"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        </picture>
       </div>
 
       <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/55 to-ink/25" />
