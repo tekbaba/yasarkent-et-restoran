@@ -9,7 +9,7 @@ import { siteConfig } from "@/config/site";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
-  subsets: ["latin", "latin-ext"],
+  subsets: ["latin-ext", "latin"],
   weight: ["400", "500"],
   variable: "--font-cormorant",
   display: "swap",
@@ -17,9 +17,10 @@ const cormorant = Cormorant_Garamond({
 });
 
 const outfit = Outfit({
-  subsets: ["latin", "latin-ext"],
+  subsets: ["latin-ext", "latin"],
   variable: "--font-outfit",
   display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {
