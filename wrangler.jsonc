@@ -14,8 +14,15 @@
       "service": "yasarkent-et-restoran"
     }
   ],
+  "workers_dev": true,
   "routes": [
-    { "pattern": "yasarkentetrestorant.com", "custom_domain": true },
-    { "pattern": "www.yasarkentetrestorant.com", "custom_domain": true }
+    {
+      "pattern": "yasarkentetrestorant.com/*",
+      "zone_name": "yasarkentetrestorant.com"
+    },
+    {
+      "pattern": "www.yasarkentetrestorant.com/*",
+      "zone_name": "yasarkentetrestorant.com"
+    }
   ]
 }
